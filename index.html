@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rasakan pengalaman kopi artisan dengan biji nusantara pilihan di Warung Kopi Rumah Kake. Tempat estetik, nyaman, dan cocok untuk bersantai.">
+    <meta name="keywords" content="cafe, kopi artisan, warung kopi, rumah kake, coffee shop estetik">
+    <title>Warung Kopi Rumah Kake | Cafe Estetik & Nyaman</title>
+    <!-- Google Fonts untuk kesan elegan dan modern -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome untuk Icon (WhatsApp, Instagram, dll) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigasi Sederhana -->
+    <nav class="navbar" id="navbar">
+        <div class="logo-container">
+            <img src="images/logo.png" alt="Logo Kopi Rasa" class="logo-img">
+            <span class="logo-text">Warung Kopi<br>Rumah Kake</span>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#home">Beranda</a></li>
+            <li><a href="#galeri">Dokumentasi</a></li>
+            <li><a href="#lokasi">Lokasi</a></li>
+        </ul>
+        <!-- Hamburger Menu untuk Mobile -->
+        <div class="hamburger" id="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Bagian Hero (Layar Penuh pertama) -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="fade-up">Setiap Cangkir<br>Punya Ceritanya.</h1>
+            <p class="fade-up delay-1">Rasakan pengalaman kopi artisan dengan biji nusantara pilihan di tempat yang
+                estetik dan nyaman.</p>
+
+            <div class="btn-group fade-up delay-2">
+                <!-- Tombol WhatsApp Dinamis -->
+                <!-- Menghubungkan langsung ke WhatsApp Warung Kake -->
+                <a href="https://wa.me/6285719445601?text=Halo%20rumah%20kake,%20saya%20ingin%20booking"
+                    class="btn btn-wa" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Chat WhatsApp
+                </a>
+                <a href="#galeri" class="btn btn-outline">Lihat Suasana</a>
+            </div>
+        </div>
+
+        <!-- Indikator Scroll -->
+        <div class="scroll-indicator">
+            <span>Scroll ke bawah</span>
+            <!-- Icon Desktop -->
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <!-- Panah Animasi Desktop (di bawah mouse) -->
+            <div class="swipe-icon desktop-arrows">
+                <i class="fas fa-chevron-down"></i>
+                <i class="fas fa-chevron-down delay"></i>
+            </div>
+            <!-- Icon Mobile (Tersembunyi di Desktop) -->
+            <div class="swipe-icon mobile-arrows">
+                <i class="fas fa-chevron-down"></i>
+                <i class="fas fa-chevron-down delay"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeri Dokumentasi (Masonry Layout) -->
+    <section id="galeri" class="gallery-section">
+        <div class="container">
+            <!-- Informasi Jam Buka di atas Galeri -->
+            <div class="jam-buka-container reveal">
+                <p class="jam-buka"><i class="far fa-clock"></i> <b>Buka Setiap Hari (Selasa Libur)</b> <span class="mobile-break"></span> <span class="separator">|</span> 12:00 Siang - 12:00 Malam</p>
+            </div>
+            
+            <h2 class="section-title">Galeri <span>Rumah Kake</span></h2>
+            <div class="masonry-gallery">
+                
+                <!-- Template untuk foto Anda (Silakan masukkan file foto-1.jpg sampai foto-6.jpg ke dalam folder images) -->
+                <div class="gallery-item reveal">
+                    <img src="images/foto-1.jpg" alt="Dokumentasi 1 - Kafe" loading="lazy">
+                </div>
+                
+                <div class="gallery-item reveal delay-1 gallery-tall">
+                    <img src="images/foto-2.jpg" alt="Dokumentasi 2 - Interior" loading="lazy">
+                </div>
+
+                <div class="gallery-item reveal delay-2">
+                    <img src="images/foto-3.jpg" alt="Dokumentasi 3 - Kopi" loading="lazy">
+                </div>
+                
+                <div class="gallery-item reveal gallery-wide">
+                    <img src="images/foto-4.jpg" alt="Dokumentasi 4 - Suasana" loading="lazy">
+                </div>
+
+                <div class="gallery-item reveal delay-1">
+                    <img src="images/foto-5.jpg" alt="Dokumentasi 5 - Seduh" loading="lazy">
+                </div>
+
+                <div class="gallery-item reveal delay-2 gallery-tall">
+                    <img src="images/foto-6.jpg" alt="Dokumentasi 6 - Estetik" loading="lazy">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal untuk Gallery -->
+    <div id="lightbox" class="lightbox">
+        <span class="close-lightbox">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" alt="Gallery Zoom">
+    </div>
+
+    <!-- Floating WhatsApp Button (Saran Fitur: Selalu ada di sudut layar) -->
+    <a href="https://wa.me/6285719445601?text=Halo%20rumah%20kake," class="floating-wa" target="_blank" aria-label="Chat WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer id="lokasi">
+        <div class="footer-content">
+            <div class="footer-logo-container">
+                <img src="images/logo.png" alt="Logo Kopi Rasa" class="footer-logo-img">
+                <span class="footer-logo-text">Warung Kopi<br>Rumah Kake</span>
+            </div>
+            <p>Jl. Kuring I No.1, RT.001/RW.001, Pedurenan, Kec. Karang Tengah, Kota Tangerang, Banten 15157</p>
+            <div class="social-links">
+                <a href="https://instagram.com/warkop.wrk" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://tiktok.com/@warkop.rumahkakek" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                <a href="https://maps.google.com/?q=warkop+rumah+kakek+(WRK)" target="_blank" aria-label="Google Maps"><i class="fas fa-map-marker-alt"></i></a>
+            </div>
+            <p class="copyright">&copy; 2026 Warung Kopi Rumah Kake. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
