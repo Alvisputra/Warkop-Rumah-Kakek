@@ -25,23 +25,21 @@ if ('scrollRestoration' in history) {
     history.scrollRestoration = 'manual';
 }
 
-// Paksa scroll ke atas secepat mungkin sebelum event load untuk mencegah kedipan/lompatan
+// Paksa scroll ke atas secepat mungkin
 window.scrollTo(0, 0);
 
-window.addEventListener('load', function() {
+window.addEventListener('load', function () {
     // Sebagai jaring pengaman, panggil scrollTo lagi dengan timeout kecil setelah load sempurna
-    setTimeout(function() {
+    setTimeout(function () {
         window.scrollTo(0, 0);
     }, 10);
 });
 
-// Safari Desktop seringkali kebal terhadap cara biasa, tambahan trik:
+// Safari Desktop & Mobile seringkali butuh trik tambahan:
 window.addEventListener('pageshow', function (event) {
-    if (event.persisted || performance.navigation.type === 1) {
-        window.scrollTo(0, 0);
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-    }
+    window.scrollTo(0, 0);
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
 });
 
 // 2. Scroll Reveal Animations (Elemen muncul mulus saat layar di-scroll)
@@ -103,6 +101,7 @@ const navLinks = document.getElementById('nav-links');
 if (hamburger) {
     hamburger.addEventListener('click', () => {
         navLinks.classList.toggle('active');
+        document.body.classList.toggle('menu-active'); // Toggle state for other elements (e.g. social icons)
         const icon = hamburger.querySelector('i');
         if (navLinks.classList.contains('active')) {
             icon.classList.remove('fa-bars');
@@ -132,20 +131,62 @@ const galleryItems = document.querySelectorAll('.gallery-item img');
 if (lightbox && galleryItems.length > 0) {
     galleryItems.forEach(img => {
         img.addEventListener('click', () => {
+            lightbox.classList.remove('closing');
+            lightboxImg.classList.remove('closing');
             lightbox.style.display = 'flex';
             lightboxImg.src = img.src;
         });
     });
 
-    closeLightbox.addEventListener('click', () => {
-        lightbox.style.display = 'none';
-        lightboxImg.src = '';
-    });
+    const closeLightboxWithAnim = () => {
+        lightbox.classList.add('closing');
+        lightboxImg.classList.add('closing');
+        
+        // Tunggu animasi selesai baru di-hide
+        setTimeout(() => {
+            lightbox.style.display = 'none';
+            lightboxImg.src = '';
+            lightbox.classList.remove('closing');
+            lightboxImg.classList.remove('closing');
+        }, 350); // Sedikit lebih cepat dari durasi CSS (400ms) buat feel lebih snappy
+    };
+
+    closeLightbox.addEventListener('click', closeLightboxWithAnim);
 
     lightbox.addEventListener('click', (e) => {
         if (e.target === lightbox) {
-            lightbox.style.display = 'none';
-            lightboxImg.src = '';
+            closeLightboxWithAnim();
+        }
+    });
+
+    // Support tombol ESC buat tutup
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lightbox.style.display === 'flex') {
+            closeLightboxWithAnim();
         }
     });
 }
+// 5. Unified Lightbox Trigger for Menu & Gallery
+function openLightbox(imageSrc) {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    
+    if (lightbox && lightboxImg && imageSrc) {
+        lightbox.classList.remove('closing');
+        lightboxImg.classList.remove('closing');
+        lightbox.style.display = 'flex';
+        lightboxImg.src = imageSrc;
+    }
+}
+
+// Attach to Menu Cards
+document.querySelectorAll('.menu-page-card').forEach(card => {
+    card.addEventListener('click', function() {
+        const src = this.getAttribute('data-src');
+        openLightbox(src);
+    });
+});
+
+// Attach to Gallery (Already handled above, but making sure unified approach is safe)
+// Ensuring openLightbox is accessible globally
+window.openLightbox = openLightbox;

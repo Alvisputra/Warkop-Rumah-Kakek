@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Rasakan pengalaman kopi artisan dengan biji nusantara pilihan di Warung Kopi Rumah Kake. Tempat estetik, nyaman, dan cocok untuk bersantai.">
-    <meta name="keywords" content="cafe, kopi artisan, warung kopi, rumah kake, coffee shop estetik">
-    <title>Warung Kopi Rumah Kake | Cafe Estetik & Nyaman</title>
+    <meta name="description" content="Rasakan pengalaman kopi artisan dengan biji nusantara pilihan di Warung Kopi Rumah Kakek. Tempat estetik, nyaman, dan cocok untuk bersantai.">
+    <meta name="keywords" content="cafe, kopi artisan, warung kopi, rumah kakek, coffee shop estetik">
+    <title>Warung Kopi Rumah Kakek | Cafe Estetik & Nyaman</title>
     <!-- Google Fonts untuk kesan elegan dan modern -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,13 +23,14 @@
     <!-- Navigasi Sederhana -->
     <nav class="navbar" id="navbar">
         <div class="logo-container">
-            <img src="images/logo.png" alt="Logo Kopi Rasa" class="logo-img">
-            <span class="logo-text">Warung Kopi<br>Rumah Kake</span>
+            <img src="images/galeri-hero/logo.png" alt="Logo Kopi Rasa" class="logo-img">
+            <span class="logo-text">Warung Kopi<br>Rumah Kakek</span>
         </div>
         <ul class="nav-links" id="nav-links">
             <li><a href="#home">Beranda</a></li>
-            <li><a href="#galeri">Dokumentasi</a></li>
-            <li><a href="#lokasi">Lokasi</a></li>
+            <li><a href="#menu-highlight">Pilihan Kakek</a></li>
+            <li><a href="#full-menu">Buku Menu</a></li>
+            <li><a href="#galeri">Galeri</a></li>
         </ul>
         <!-- Hamburger Menu untuk Mobile -->
         <div class="hamburger" id="hamburger">
@@ -47,8 +48,8 @@
 
             <div class="btn-group fade-up delay-2">
                 <!-- Tombol WhatsApp Dinamis -->
-                <!-- Menghubungkan langsung ke WhatsApp Warung Kake -->
-                <a href="https://wa.me/6285719445601?text=Halo%20rumah%20kake,%20saya%20ingin%20booking"
+                <!-- Menghubungkan langsung ke WhatsApp Warung Kakek -->
+                <a href="https://wa.me/6285719445601?text=Halo%20rumah%20kakek,%20saya%20ingin%20booking"
                     class="btn btn-wa" target="_blank">
                     <i class="fab fa-whatsapp"></i> Chat WhatsApp
                 </a>
@@ -76,40 +77,143 @@
         </div>
     </section>
 
-    <!-- Galeri Dokumentasi (Masonry Layout) -->
-    <section id="galeri" class="gallery-section">
+    <!-- Menu Highlight (Pilihan Kakek) -->
+    <section id="menu-highlight" class="menu-section reveal">
         <div class="container">
-            <!-- Informasi Jam Buka di atas Galeri -->
+            <!-- Informasi Jam Buka di atas Menu (Desktop Only) -->
             <div class="jam-buka-container reveal">
-                <p class="jam-buka"><i class="far fa-clock"></i> <b>Buka Setiap Hari (Selasa Libur)</b> <span class="mobile-break"></span> <span class="separator">|</span> 12:00 Siang - 12:00 Malam</p>
+                <p class="jam-buka">
+                    <i class="far fa-clock"></i> 
+                    <b>Buka Setiap Hari (Selasa Libur)</b> 
+                    <span class="separator">|</span> 
+                    <span class="hours-text">12:00 Siang - 12:00 Malam</span>
+                </p>
             </div>
             
-            <h2 class="section-title">Galeri <span>Rumah Kake</span></h2>
+            <h2 class="section-title">Pilihan Kakek</h2>
+            <div class="menu-grid">
+                <!-- Item 1: Kopi Susu -->
+                <div class="menu-card">
+                    <div class="menu-img">
+                        <img src="images/pilihan-kakek/menu-1.jpg" alt="Es Kopi Susu Aren WRK">
+                    </div>
+                    <div class="menu-body">
+                        <h3>Es Kopi Susu Aren WRK</h3>
+                        <p>Racikan kopi pilihan dengan susu creamy dan manis legit gula aren murni khas WRK.</p>
+                        <span class="menu-price">Rp 20.000</span>
+                    </div>
+                </div>
+
+                <!-- Item 2: Ketan Susu -->
+                <div class="menu-card">
+                    <div class="menu-img">
+                        <img src="images/pilihan-kakek/menu-2.jpg" alt="Ketan Susu (keju)">
+                    </div>
+                    <div class="menu-body">
+                        <h3>Ketan Susu <small>(keju)</small></h3>
+                        <p>Ketan putih pulen dengan kental manis dan parutan keju premium yang melimpah.</p>
+                        <span class="menu-price">Rp 12.000</span>
+                    </div>
+                </div>
+
+                <!-- Item 3: Nasi Goreng -->
+                <div class="menu-card">
+                    <div class="menu-img">
+                        <img src="images/pilihan-kakek/menu-3.jpg" alt="Nasi Goreng">
+                    </div>
+                    <div class="menu-body">
+                        <h3>Nasi Goreng</h3>
+                        <p>Nasi goreng spesial dengan bumbu rempah pilihan, telur, dan kerupuk renyah.</p>
+                        <span class="menu-price">Rp 15.000</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Buku Menu Lengkap (Slider) -->
+    <section id="full-menu" class="full-menu-section reveal">
+        <div class="container">
+            <h2 class="section-title">Buku Menu</h2>
+            <p class="section-subtitle">Geser untuk melihat detail menu lengkap kami</p>
+            
+            <div class="menu-book-wrapper">
+                <div class="menu-book-slider">
+                    <!-- Halaman 1 -->
+                    <div class="menu-page-card" data-src="images/buku-menu/menu-1.jpg">
+                        <img src="images/buku-menu/menu-1.jpg" alt="Menu Halaman 1" loading="lazy">
+                        <div class="page-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <span>Klik untuk Perbesar</span>
+                        </div>
+                    </div>
+                    <!-- Halaman 2 -->
+                    <div class="menu-page-card" data-src="images/buku-menu/menu-2.jpg">
+                        <img src="images/buku-menu/menu-2.jpg" alt="Menu Halaman 2" loading="lazy">
+                        <div class="page-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <span>Klik untuk Perbesar</span>
+                        </div>
+                    </div>
+                    <!-- Halaman 3 -->
+                    <div class="menu-page-card" data-src="images/buku-menu/menu-3.jpg">
+                        <img src="images/buku-menu/menu-3.jpg" alt="Menu Halaman 3" loading="lazy">
+                        <div class="page-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <span>Klik untuk Perbesar</span>
+                        </div>
+                    </div>
+                    <!-- Halaman 4 -->
+                    <div class="menu-page-card" data-src="images/buku-menu/menu-4.jpg">
+                        <img src="images/buku-menu/menu-4.jpg" alt="Menu Halaman 4" loading="lazy">
+                        <div class="page-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <span>Klik untuk Perbesar</span>
+                        </div>
+                    </div>
+                    <!-- Halaman 5 -->
+                    <div class="menu-page-card" data-src="images/buku-menu/menu-5.jpg">
+                        <img src="images/buku-menu/menu-5.jpg" alt="Menu Halaman 5" loading="lazy">
+                        <div class="page-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <span>Klik untuk Perbesar</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Section 4: Galeri Dokumentasi (Masonry Layout) -->
+    <section id="galeri" class="gallery-section">
+        <div class="container">
+            <h2 class="section-title">Galeri Rumah Kakek</h2>
             <div class="masonry-gallery">
                 
                 <!-- Template untuk foto Anda (Silakan masukkan file foto-1.jpg sampai foto-6.jpg ke dalam folder images) -->
                 <div class="gallery-item reveal">
-                    <img src="images/foto-1.jpg" alt="Dokumentasi 1 - Kafe" loading="lazy">
+                    <img src="images/galeri-hero/foto-1.jpg" alt="Dokumentasi 1 - Kafe" loading="lazy">
                 </div>
                 
                 <div class="gallery-item reveal delay-1 gallery-tall">
-                    <img src="images/foto-2.jpg" alt="Dokumentasi 2 - Interior" loading="lazy">
+                    <img src="images/galeri-hero/foto-2.jpg" alt="Dokumentasi 2 - Interior" loading="lazy">
                 </div>
 
                 <div class="gallery-item reveal delay-2">
-                    <img src="images/foto-3.jpg" alt="Dokumentasi 3 - Kopi" loading="lazy">
+                    <img src="images/galeri-hero/foto-3.jpg" alt="Dokumentasi 3 - Kopi" loading="lazy">
                 </div>
                 
                 <div class="gallery-item reveal gallery-wide">
-                    <img src="images/foto-4.jpg" alt="Dokumentasi 4 - Suasana" loading="lazy">
+                    <img src="images/galeri-hero/foto-4.jpg" alt="Dokumentasi 4 - Suasana" loading="lazy">
                 </div>
 
                 <div class="gallery-item reveal delay-1">
-                    <img src="images/foto-5.jpg" alt="Dokumentasi 5 - Seduh" loading="lazy">
+                    <img src="images/galeri-hero/foto-5.jpg" alt="Dokumentasi 5 - Seduh" loading="lazy">
                 </div>
 
                 <div class="gallery-item reveal delay-2 gallery-tall">
-                    <img src="images/foto-6.jpg" alt="Dokumentasi 6 - Estetik" loading="lazy">
+                    <img src="images/galeri-hero/foto-6.jpg" alt="Dokumentasi 6 - Estetik" loading="lazy">
                 </div>
 
             </div>
@@ -122,8 +226,15 @@
         <img class="lightbox-content" id="lightbox-img" alt="Gallery Zoom">
     </div>
 
+    <!-- Floating Social Media Sidebar (Kiri) -->
+    <div class="floating-social">
+        <a href="https://instagram.com/warkop.wrk" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://tiktok.com/@warkop.rumahkakek" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        <a href="https://maps.google.com/?q=warkop+rumah+kakek+(WRK)" target="_blank" aria-label="Google Maps"><i class="fas fa-map-marker-alt"></i></a>
+    </div>
+
     <!-- Floating WhatsApp Button (Saran Fitur: Selalu ada di sudut layar) -->
-    <a href="https://wa.me/6285719445601?text=Halo%20rumah%20kake," class="floating-wa" target="_blank" aria-label="Chat WhatsApp">
+    <a href="https://wa.me/6285719445601?text=Halo%20rumah%20kakek," class="floating-wa" target="_blank" aria-label="Chat WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -131,16 +242,11 @@
     <footer id="lokasi">
         <div class="footer-content">
             <div class="footer-logo-container">
-                <img src="images/logo.png" alt="Logo Kopi Rasa" class="footer-logo-img">
-                <span class="footer-logo-text">Warung Kopi<br>Rumah Kake</span>
+                <img src="images/galeri-hero/logo.png" alt="Logo Kopi Rasa" class="footer-logo-img">
+                <span class="footer-logo-text">Warung Kopi<br>Rumah Kakek</span>
             </div>
             <p>Jl. Kuring I No.1, RT.001/RW.001, Pedurenan, Kec. Karang Tengah, Kota Tangerang, Banten 15157</p>
-            <div class="social-links">
-                <a href="https://instagram.com/warkop.wrk" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="https://tiktok.com/@warkop.rumahkakek" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-                <a href="https://maps.google.com/?q=warkop+rumah+kakek+(WRK)" target="_blank" aria-label="Google Maps"><i class="fas fa-map-marker-alt"></i></a>
-            </div>
-            <p class="copyright">&copy; 2026 Warung Kopi Rumah Kake. All rights reserved.</p>
+            <p class="copyright">&copy; 2026 Warung Kopi Rumah Kakek. All rights reserved.</p>
         </div>
     </footer>
 
